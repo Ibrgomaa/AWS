@@ -1,0 +1,122 @@
+{
+    "AWS::AutoScaling::LaunchConfiguration": {
+        "resourceProperties": {
+            "InstanceType": "invalid"
+        }
+    },
+    "AWS::Cloud9::EnvironmentEC2": {
+        "resourceProperties": {
+            "InstanceType": "invalid"
+        }
+    },
+    "AWS::EC2::CapacityReservation": {
+        "resourceProperties": {
+            "AvailabilityZone": "invalid",
+            "InstanceCount": 1,
+            "InstanceMatchCriteria": "invalid",
+            "InstancePlatform": "invalid",
+            "InstanceType": "invalid"
+        }
+    },
+    "AWS::EC2::CapacityReservationFleet": {
+        "resourceProperties": {
+            "AllocationStrategy": "prioritized",
+            "InstanceTypeSpecifications": [
+                {
+                    "InstanceType": "invalid",
+                    "InstancePlatform": "invalid",
+                    "AvailabilityZone": "invalid",
+                    "Weight": 1,
+                    "Priority": 1
+                },
+                {
+                    "InstanceType": "invalid",
+                    "InstancePlatform": "invalid",
+                    "AvailabilityZone": "invalid",
+                    "Weight": 1,
+                    "Priority": 2
+                }
+            ],
+            "Tenancy": "default",
+            "TotalTargetCapacity": 2,
+            "InstanceMatchCriteria": "open"
+        }
+    },
+    "AWS::EC2::Host": {
+        "resourceProperties": {
+            "InstanceType": "invalid"
+        }
+    },
+    "AWS::EC2::Instance": {
+        "resourceProperties": {
+            "InstanceType": "invalid"
+        }
+    },
+    "AWS::EC2::LaunchTemplate": {
+        "resourceProperties": {
+            "LaunchTemplateData": {
+                "InstanceRequirements": {
+                    "AcceleratorCount": {
+                        "Max": 1,
+                        "Min": 1
+                    },
+                    "AcceleratorManufacturers": [
+                        "invalid"
+                    ],
+                    "AcceleratorNames": [
+                        "invalid"
+                    ],
+                    "AcceleratorTotalMemoryMiB": {
+                        "Max": 1,
+                        "Min": 1
+                    },
+                    "AcceleratorTypes": [
+                        "invalid"
+                    ],
+                    "BareMetal": "excluded",
+                    "BaselineEbsBandwidthMbps": {
+                        "Max": 1,
+                        "Min": 1
+                    },
+                    "BurstablePerformance": "invalid",
+                    "CpuManufacturers": [
+                        "invalid"
+                    ],
+                    "ExcludedInstanceTypes": [
+                        "m5.8xlarge"
+                    ],
+                    "InstanceGenerations": [
+                        "current"
+                    ],
+                    "LocalStorage": "invalid",
+                    "LocalStorageTypes": [
+                        "ssd"
+                    ],
+                    "MemoryGiBPerVCpu": {
+                        "Max": 1.0,
+                        "Min": 1.0
+                    },
+                    "MemoryMiB": {
+                        "Max": 1,
+                        "Min": 1
+                    },
+                    "NetworkInterfaceCount": {
+                        "Max": 1,
+                        "Min": 1
+                    },
+                    "OnDemandMaxPricePercentageOverLowestPrice": 20,
+                    "RequireHibernateSupport": false,
+                    "SpotMaxPricePercentageOverLowestPrice": 100,
+                    "TotalLocalStorageGB": {
+                        "Max": 1.0,
+                        "Min": 1.0
+                    },
+                    "VCpuCount": {
+                        "Max": 1,
+                        "Min": 1
+                    }
+                }
+            }
+        }
+    }
+}
