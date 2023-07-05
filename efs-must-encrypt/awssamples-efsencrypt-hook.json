@@ -1,0 +1,32 @@
+{
+    "typeName": "AWSSamples::EFSEncrypt::Hook",
+    "description": "Example hook to validate that encryption is enabled when creating or updating an AWS EFS filesystem.",
+    "sourceUrl": "https://github.com/aws-cloudformation/aws-cloudformation-samples/tree/main/hooks/java-hooks/efs-must-encrypt",
+    "documentationUrl": "https://github.com/aws-cloudformation/aws-cloudformation-samples/blob/main/hooks/java-hooks/efs-must-encrypt/README.md",
+    "typeConfiguration": {
+        "properties": {
+            "EncryptionAlgorithm": {
+                "description": "Encryption algorithm for SSE",
+                "default": "AES256",
+                "type": "string"
+            }
+        },
+        "additionalProperties": false
+    },
+    "required": [],
+    "handlers": {
+        "preCreate": {
+            "targetNames": [
+                "AWS::EFS::FileSystem"
+            ],
+            "permissions": []
+        },
+        "preUpdate": {
+            "targetNames": [
+                "AWS::EFS::FileSystem"
+            ],
+            "permissions": []
+        }
+    },
+    "additionalProperties": false
+}
